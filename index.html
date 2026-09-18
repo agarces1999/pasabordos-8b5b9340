@@ -115,7 +115,8 @@ const VIAJES = {
     destino: { iata: "LIM", ciudad: "Lima" },
     clase: "Mesa reservada",
     vuelo: "NS 501", puerta: "COCINA", asiento: "2A", grupo: "1",
-    embarque: "Cuando digas", fecha: "Abierta",
+    embarque: "Cuando digas", fecha: "20 de enero de 2027",
+    operador: "Avianca · AV 51", escala: "Directo · 3 h 10 m",
     nota: "Cuatro días comiendo. Ceviche, tiradito, chifa y un anticucho en la calle a las once de la noche. Reserva en el sitio bueno incluida.",
   },
   japon: {
@@ -123,7 +124,8 @@ const VIAJES = {
     destino: { iata: "HND", ciudad: "Tokio" },
     clase: "Ventana",
     vuelo: "NS 707", puerta: "MUNDO", asiento: "1A", grupo: "1",
-    embarque: "Cuando digas", fecha: "Abierta",
+    embarque: "Cuando digas", fecha: "30 de mayo de 2027",
+    operador: "United + ANA", escala: "Vía Houston · no hay vuelo directo",
     nota: "El viaje largo. Tokio, un tren bala y la ciudad que ninguno de los dos conoce. Este es el que más se demora en cuadrar y el que más ganas tengo de cumplir.",
   },
   puertorico: {
@@ -131,7 +133,8 @@ const VIAJES = {
     destino: { iata: "SJU", ciudad: "San Juan" },
     clase: "Sin plan",
     vuelo: "NS 911", puerta: "PLAYA", asiento: "2B", grupo: "1",
-    embarque: "Cuando digas", fecha: "Abierta",
+    embarque: "Cuando digas", fecha: "10 de agosto de 2027",
+    operador: "Avianca · AV 214", escala: "Directo · sale 07:30",
     nota: "Volver a donde empezó todo. Misma playa, misma luna, mismo cuento de la luna. Esta vez ya somos novios.",
   },
   orlando: {
@@ -139,7 +142,8 @@ const VIAJES = {
     destino: { iata: "MCO", ciudad: "Orlando" },
     clase: "Maleta vacía",
     vuelo: "NS 305", puerta: "OUTLET", asiento: "3A", grupo: "1",
-    embarque: "Cuando digas", fecha: "Abierta",
+    embarque: "Cuando digas", fecha: "10 de marzo de 2027",
+    operador: "Avianca · AV 216", escala: "Directo · 4 h 15 m",
     nota: "Vamos con la maleta vacía y volvemos como sea. Sin cara de culpa y sin preguntar cuánto costó.",
   },
 };
@@ -195,6 +199,10 @@ function pase(clave, v) {
       <div><div class="lab">Asiento</div><div class="val">${esc(v.asiento)}</div></div>
       <div><div class="lab">Grupo</div><div class="val">${esc(v.grupo)}</div></div>
       <div><div class="lab">Embarque</div><div class="val sm">${esc(v.embarque)}</div></div>
+    </div>
+    <div class="rejilla dos">
+      <div><div class="lab">Operado por</div><div class="val sm">${esc(v.operador)}</div></div>
+      <div><div class="lab">Escalas</div><div class="val sm">${esc(v.escala)}</div></div>
     </div>
     <div class="perf"></div>
     <div class="pie">
